@@ -65,7 +65,7 @@ const showWeather = (data) => {
                     <td>${date1.toLocaleTimeString("en-US")}</td>
                     </tr>
                     <tr>
-                    <td >Sunrise</td>
+                    <td >Sunset</td>
                     <td>${date2.toLocaleTimeString("en-US")}</td>
                     </tr>
                     <tr>
