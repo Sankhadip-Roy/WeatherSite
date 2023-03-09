@@ -13,6 +13,10 @@ const getWeather = async (city) => {
 
 const showWeather = (data) => {
     console.log(data)
+    let unix1 = data.sys.sunrise;
+    let date1 = new Date(unix1 * 1000);
+    let unix2 = data.sys.sunset;
+    let date2 = new Date(unix2 * 1000);
     if (data.cod == "404") {
         weather.innerHTML = `<h2> City Not Found <h2>`
         return;
@@ -51,6 +55,14 @@ const showWeather = (data) => {
                     <tr>
                     <td >Pressure</td>
                     <td>${data.main.pressure / 1013} atm</td>
+                    </tr>
+                    <tr>
+                    <td >Sunrise</td>
+                    <td>${date1}</td>
+                    </tr>
+                    <tr>
+                    <td >Sunrise</td>
+                    <td>${date2}</td>
                     </tr>
                     <tr>
                     <td >Location</td>
