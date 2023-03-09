@@ -1,3 +1,7 @@
+function feedBack() {
+    alert("If you are in mobile device turn on desktop mode. This is not yet optimized for smaller screens")
+}
+setTimeout(feedBack, 5000);
 const API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
 const form = document.querySelector("form")
 const search = document.querySelector("#search")
@@ -28,7 +32,7 @@ const showWeather = (data) => {
         <div>
             <h2>${data.main.temp} ℃</h2>
             <h4> ${data.weather[0].main} </h4>
-            <table class="table table-hover table-borderless table-sm table-striped  table-responsive-sm">
+            <table class="table table-hover table-borderless table-sm table-striped  table-responsive">
                 <thead>
                     <tr>
                     <th scope="col">${data.name}</th>
@@ -58,11 +62,11 @@ const showWeather = (data) => {
                     </tr>
                     <tr>
                     <td >Sunrise</td>
-                    <td>${date1}</td>
+                    <td>${date1.toLocaleTimeString("en-US")}</td>
                     </tr>
                     <tr>
                     <td >Sunrise</td>
-                    <td>${date2}</td>
+                    <td>${date2.toLocaleTimeString("en-US")}</td>
                     </tr>
                     <tr>
                     <td >Location</td>
